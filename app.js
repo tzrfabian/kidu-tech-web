@@ -16,6 +16,7 @@ app.use(session({
     }
 }));
 app.use(require('./routes'));
+app.use('/uploads', express.static('uploads'));
 app.use(express.static("style"));
 
 app.listen(port, () => {
