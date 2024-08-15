@@ -2,61 +2,36 @@
     {
         "name": "Kimberly Miller",
         "email": "kmiller0@mit.edu",
-        "password": null,
-        "role": "user"
+        "password": "password123",
+        "role": "user",
+        "gender": "Female"
     },
     {
         "name": "Valentina Blondin",
         "email": "vblondin1@va.gov",
-        "password": null,
-        "role": "user"
+        "password": "securepass456",
+        "role": "user",
+        "gender": "Female"
     },
     {
         "name": "Neville Hansberry",
         "email": "nhansberry2@xinhuanet.com",
-        "password": null,
-        "role": "user"
+        "password": "mypass789",
+        "role": "user",
+        "gender": "Male"
     },
     {
         "name": "Sophia Killingsworth",
         "email": "skillingsworth3@npr.org",
-        "password": null,
-        "role": "user"
+        "password": "killingsworth123",
+        "role": "user",
+        "gender": "Female"
     },
     {
         "name": "Hedwig MacAvaddy",
         "email": "hmacavaddy4@baidu.com",
-        "password": null,
-        "role": "user"
-    },
-    {
-        "name": "Faith Collisson",
-        "email": "fcollisson5@technorati.com",
-        "password": null,
-        "role": "user"
-    },
-    {
-        "name": "Chelsy Tallis",
-        "email": "ctallis6@edublogs.org",
-        "password":null,
-        "role": "user"
-    },
-    {
-        "name": "Ignazio Marden",
-        "email": "imarden7@vk.com",
-        "password": null,
-        "role": "user"
-    },
-    {
-        "name": "Cleo Whymark",
-        "email": "cwhymark8@archive.org",
-        "password":null,
-        "role": "user"
-    },
-    {
-        "name": "Leann Treuge",
-        "email": "ltreuge9@senate.gov",
-        "password": null,
-        "role": "user"
+        "password": "hedwigpass456",
+        "role": "user",
+        "gender": "Female"
     }
 ]

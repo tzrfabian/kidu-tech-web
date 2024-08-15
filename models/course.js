@@ -11,16 +11,71 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Course.belongsTo(models.Category);
+      Course.belongsToMany(models.User, {through: 'UserCourses'});
       Course.hasMany(models.Content);
-      Course.hasMany(models.UserCourse);
     }
   }
   Course.init({
-    name: DataTypes.STRING,
-    description: DataTypes.STRING,
-    courseImg: DataTypes.STRING,
-    duration: DataTypes.INTEGER,
-    CategoryId: DataTypes.INTEGER
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'Nama Course tidak boleh kosong'
+        },
+        notNull: {
+          msg: 'Nama Course tidak boleh kosong'
+        }
+      }
+    },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'Deskripsi tidak boleh kosong'
+        },
+        notNull: {
+          msg: 'Deskripsi tidak boleh kosong'
+        }
+      }
+    },
+    courseImg: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'Silahkan lakukan upload image'
+        },
+        notNull: {
+          msg: 'Silahkan lakukan upload image'
+        }
+      }
+    },
+    duration: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'Jumlah durasi tidak boleh kosong'
+        },
+        notNull: {
+          msg: 'Jumlah durasi tidak boleh kosong'
+        }
+      }
+    },
+    CategoryId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'Silahkan pilih kategori course'
+        },
+        notNull: {
+          msg: 'Silahkan pilih kategori course'
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Course',

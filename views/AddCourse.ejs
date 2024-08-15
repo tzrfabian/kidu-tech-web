@@ -3,6 +3,13 @@
 <div class="container">
     <h1>Add Course</h1>
     <hr>
+    <% if (errors) { %>
+        <% errors.forEach(el => { %>
+            <div class="alert alert-danger" role="alert">
+                <%= el %>
+              </div>
+        <% }) %>
+    <% } %>
 
     <form action="/course/add" method="post" enctype="multipart/form-data">
         <div class="mb-3">

@@ -28,8 +28,8 @@ class UserController {
                     name, email, password, role, gender
                 });
                 if(newUser) {
-                    req.session.userId = checked.id;
-                    req.session.role = checked.role;
+                    req.session.userId = newUser.id;
+                    req.session.role = newUser.role;
                     res.redirect('/login');
                 } else {
                     res.redirect('/register?error=registrasi gagal');
@@ -70,6 +70,17 @@ class UserController {
         } catch (err) {
             res.send(err);
         }
+    }
+
+    static async logout(req, res) {
+        req.session.destroy((err) => {
+            if(err) {
+                console.log(err);
+                res.send(err);
+            }else{
+                res.redirect('/login')
+            }
+        })
     }
 
 }

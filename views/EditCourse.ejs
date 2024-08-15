@@ -1,0 +1,50 @@
+<%- include('partials/Header') %>
+
+<div class="container">
+    <h1>Edit Course</h1>
+    <hr>
+    <% if (errors) { %>
+        <% errors.forEach(el => { %>
+            <div class="alert alert-danger" role="alert">
+                <%= el %>
+              </div>
+        <% }) %>
+    <% } %>
+
+    <form action="/course/edit/<%= data.id %>" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="name" class="form-label fw-semibold">Nama Course:</label>
+            <input type="text" class="form-control" placeholder="ex: Belajar membaca" name="name" value="<%= data.name %>">
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label fw-semibold">Deskripsi:</label>
+            <input type="text" class="form-control" placeholder="ex: Biasakan untuk mencontohkan hal baik" name="description" value="<%= data.description %>">
+        </div>
+
+        <div class="mb-3">
+            <label for="courseImg" class="form-label fw-semibold">Gambar Course:</label>
+            <input class="form-control" type="file" id="formFile" name="courseImg" value="<%= data.courseImg %>">
+        </div>
+
+        <div class="mb-3">
+            <label for="duration" class="form-label fw-semibold">Durasi Pembelajaran:</label>
+            <input type="number" class="form-control" placeholder="Masukkan angka" name="duration" value="<%= data.duration %>">
+        </div>
+
+        <div class="mb-3">
+            <label for="category" class="form-label">Kategori Course:</label>
+            <select class="form-select" name="CategoryId" >
+                <option value="<%= data.CategoryId %>" <%= data.CategoryId === 1 ? 'selected' : '' %>>Membaca</option>
+                <option value="<%= data.CategoryId %>" <%= data.CategoryId === 2 ? 'selected' : '' %>>Menulis</option>
+                <option value="<%= data.CategoryId %>" <%= data.CategoryId === 3 ? 'selected' : '' %>>Menghitung</option>
+                <option value="<%= data.CategoryId %>" <%= data.CategoryId === 4 ? 'selected' : '' %>>Pengetahuan Umum</option>
+                <option value="<%= data.CategoryId %>" <%= data.CategoryId === 5 ? 'selected' : '' %>>Problem Solving</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary">Submit Data!</button>
+    </form>
+</div>
+
+<%- include('partials/Footer') %>
