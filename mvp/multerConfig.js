@@ -5,18 +5,17 @@ const fs = require('fs');
 // Set storage engine
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        const uploadPath = 'uploads/'
-        if (!fs.existsSync(uploadPath)) {
-            fs.mkdirSync(uploadPath); // Membuat folder jika belum ada
+        const path = 'uploads/'
+        if (!fs.existsSync(path)) {
+            fs.mkdirSync(path); // Membuat folder jika belum ada
         }
-        cb(null, 'uploads/');  // 'uploads/' is the folder where images will be stored
+        cb(null, 'uploads/');
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
 });
 
-// Check File Type
 function checkFileType(file, cb) {
     const filetypes = /jpeg|jpg|png|gif/;
     const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
