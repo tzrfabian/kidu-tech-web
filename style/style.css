@@ -1,4 +1,33 @@
-:root {
+.card {
+    position: center
+    ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* :root {
     --primary: #5ab439;
     --bg: #010101;
 }
@@ -18,9 +47,9 @@ body {
     background-color: var(--bg);
     color: aqua;
 
-}
+} */
 /* navbar */
-.navbar {
+/* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +60,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 92;
 }
 
 .navbar .navbar-logo  {
@@ -73,18 +102,18 @@ body {
 
 .navbar .navbar-extra a:hover {
     color: var(--primary);
-}
+} */
 
 /* navbar end */
 
 /* body start */
 
-.hero {
+/* .awalan {
     min-height: 100vh;
     display: flex;
     align-items: center;
     background-image: url('../foto/background.jpeg');
     background-repeat: no-repeat;
-}
+} */
 
-/* body end */
+
