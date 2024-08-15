@@ -1,0 +1,27 @@
+[
+    {
+        "userId": 1,
+        "courseId": 3,
+        "status": "Finished"
+    },
+    {
+        "userId": 2,
+        "courseId": 1,
+        "status": "Finished"
+    },
+    {
+        "userId": 3,
+        "courseId": 1,
+        "status": "Not Finish Yet"
+    },
+    {
+        "userId": 4,
+        "courseId": 5,
+        "status": "Not Finish Yet"
+    },
+    {
+        "userId": 5,
+        "courseId": 4,
+        "status": "Finished"
+    }
+]
