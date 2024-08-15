@@ -1,4 +1,5 @@
 const CategoryController = require('../controllers/CategoryController');
+const CourseController = require('../controllers/CourseController');
 const HomePageController = require('../controllers/HomePageController');
 const ProfileController = require('../controllers/ProfileController');
 const UserController = require('../controllers/UserController');

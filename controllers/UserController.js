@@ -42,7 +42,7 @@ class UserController {
             if(user) {
                 const isValidPass = bcrypt.compareSync(password, user.password)
                 if(isValidPass) {
-                    return res.redirect('');
+                    return res.redirect('/');
                 } else {
                     return res.redirect(`/login?error=invalid email/password`);
                 }
