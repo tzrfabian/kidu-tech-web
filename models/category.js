@@ -12,6 +12,27 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Category.hasMany(models.Course);
     }
+
+    static async getAllCategoriesandCount() {
+      let data = await Category.findAll({
+                attributes: [
+                'id', 
+                'name',
+                [sequelize.fn('COUNT', sequelize.col('Courses.CategoryId')), 'JumlahCourse']
+            ],
+            include: [
+                {
+                    model: sequelize.models.Course,
+                    attributes: []
+                }
+            ],
+            group: ['Category.id'],
+            order: [[sequelize.literal('"JumlahCourse"'), 'DESC']],
+            raw: true
+            });
+      return data;
+    }
+    
   }
   Category.init({
     name: DataTypes.STRING
