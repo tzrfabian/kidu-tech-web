@@ -18,13 +18,13 @@ router.post('/register', UserController.postRegister);
 router.get('/login', UserController.loginForm);
 router.post('/login', UserController.postLogin)
 
-router.use(function (req, res, next) {
-    if(!req.session.userId || !req.session.role) {
-        res.redirect('/login?error=please login first!')
-    } else {
-        next();
-    }
-});
+// router.use(function (req, res, next) {
+//     if(!req.session.userId || !req.session.role) {
+//         res.redirect('/login?error=please login first!')
+//     } else {
+//         next();
+//     }
+// });
 
 //router Category
 router.get('/category', CategoryController.getAllCategory)
