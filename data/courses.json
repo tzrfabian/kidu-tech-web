@@ -4,44 +4,34 @@
         "description": "Banyak cara untuk belajar membaca, salah satunya dengan menf=ggunakan metode visual, dapat membantu anak-anak untuk cepat dalam membaca",
         "courseImg": "https://cdn.gramedia.com/uploads/items/9786230028847_15_Menit_Mudah_Belajar_Baca_Tulis_cover.jpg",
         "duration": "10 minutes",
-        "categoryId": 1,
-        "createdAt": "7/26/2024",
-        "updatedAt": "2/11/2024"
+        "categoryId": 1
     },
     {
         "name": "Bermain Bersama Keluarga",
         "description": "Ajaklah anak-anak untuk bermain bersama keluarga, adalah salah-satu upaya untuk membantu pertumbuhan komunikasi dan motorik anak",
         "courseImg": "https://marketplace.canva.com/EAFWGlbDHus/2/0/501w/canva-hijau-biru-dan-kuning-moderen-illustrasi-latar-belakang-keluarga-sampul-buku-kebersamaan-keluarga-muslim-i1A1F6l9eOw.jpg",
         "duration": "15 minutes",
-        "categoryId": 2,
-        "createdAt": "12/10/2023",
-        "updatedAt": "2/25/2024"
+        "categoryId": 2
     },
     {
         "name": "Membantu Ibu",
         "description": "Biasakan unutk mengajari anak untuk membantu ibu supanya anak dapat memiliki rasa sosial",
         "courseImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR00cw9qLf1yRZe0dO1EiLr0X883RvIvHrJvA&s",
         "duration": "15 minutes",
-        "categoryId": 3,
-        "createdAt": "7/4/2024",
-        "updatedAt": "3/17/2024"
+        "categoryId": 3
     },
     {
         "name": "Menolong Sesama",
         "description": "Biasakan untuk mencontohkan hal baik salah-satunya membantu sesama, metode ini bisa memngembangkan rasa emparty si-anak",
         "courseImg": "https://pmpk.kemdikbud.go.id/bukudigital/upload/modules/images/1606569920_5fc24fc072d90.PNG",
         "duration": "10 minutes",
-        "categoryId": 3,
-        "createdAt": "11/14/2023",
-        "updatedAt": "3/1/2024"
+        "categoryId": 3
     },
     {
         "name": "Adab Kepada Sesama",
         "description": "Hal dasar yang diperlukan pada anak adalah memiliki sifat menghargai kepada sesama pada masih kecil, diharapkan di masa depan anak mempunyai budi pekerti yang baik",
         "courseImg": "https://sahabatgemainsani.id/files/products/2448/cover1.PNG",
         "duration": "10 minutes",
-        "categoryId": 4,
-        "createdAt": "8/23/2023",
-        "updatedAt": "7/23/2024"
+        "categoryId": 4
     }
 ]
