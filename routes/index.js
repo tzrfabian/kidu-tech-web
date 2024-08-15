@@ -1,4 +1,5 @@
 const CategoryController = require('../controllers/CategoryController');
+const CourseController = require('../controllers/CourseController');
 const HomePageController = require('../controllers/HomePageController');
 const UserController = require('../controllers/UserController');
 
@@ -27,6 +28,7 @@ router.post('/login', UserController.postLogin)
 
 router.get('/', HomePageController.homePage);
 
-router.get('/category', CategoryController.getAllCategory)
+router.get('/category', CategoryController.getAllCategory);
+router.get('/course', CourseController.getAllCourse);
 
 module.exports = router;

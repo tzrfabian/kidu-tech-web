@@ -3,7 +3,8 @@
 <div class="container">
     <h1>Category List</h1>
     <hr>
-    <table class="table">
+    <a href="/course" class="btn btn-primary mb-3">All Courses</a>
+    <table class="table table table-success table-striped-columns">
         <thead>
           <tr>
             <th scope="col">No.</th>
@@ -12,18 +13,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-          </tr>
+            <% data.forEach((el, i) => { %>
+                <tr>
+                    <th scope="row"><%= i + 1 %></th>
+                    <td><%= el.name %></td>
+                    <td>
+                        <a href="" class="btn btn-success">See More</a>
+                    </td>
+                </tr>
+            <% }) %>
+          
         </tbody>
       </table>
 
