@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Membaca",
+        "createdAt": "3/31/2024",
+        "updatedAt": "12/16/2023"
+    },
+    {
+        "name": "Menulis",
+        "createdAt": "3/4/2024",
+        "updatedAt": "2/22/2024"
+    },
+    {
+        "name": "Menghitung",
+        "createdAt": "7/25/2024",
+        "updatedAt": "4/12/2024"
+    },
+    {
+        "name": "Pengetahuan Umum",
+        "createdAt": "1/29/2024",
+        "updatedAt": "6/13/2024"
+    },
+    {
+        "name": "Problem Solving",
+        "createdAt": "7/19/2024",
+        "updatedAt": "1/30/2024"
+    }
+]
