@@ -1,3 +1,4 @@
+const { Op } = require("sequelize");
 const { User } = require("../models");
 const bcrypt = require('bcryptjs');
 
@@ -13,10 +14,27 @@ class UserController {
     static async postRegister(req, res) {
         let {name, email, password, role, gender} = req.body;
         try {
-            await User.create({
-                name, email, password, role, gender
+            let checked = await User.findOne({
+                where: {
+                    email: {
+                        [Op.iLike]: `${email}`
+                    }
+                }
             });
-            res.redirect('/login');
+            if(checked) {
+                res.redirect('/register?error=email sudah terpakai')
+            } else {
+            let newUser = await User.create({
+                    name, email, password, role, gender
+                });
+                if(newUser) {
+                    req.session.userId = checked.id;
+                    req.session.role = checked.role;
+                    res.redirect('/login');
+                } else {
+                    res.redirect('/register?error=registrasi gagal');
+                }
+            }
         } catch (err) {
             console.log(err);
             res.send(err);

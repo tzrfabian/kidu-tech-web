@@ -3,6 +3,7 @@ const CourseController = require('../controllers/CourseController');
 const HomePageController = require('../controllers/HomePageController');
 const ProfileController = require('../controllers/ProfileController');
 const UserController = require('../controllers/UserController');
+const course = require('../models/course');
 
 const router = require('express').Router();
 
@@ -31,6 +32,10 @@ router.post('/login', UserController.postLogin)
 
 //router Category
 router.get('/category', CategoryController.getAllCategory)
+
+// router course
+router.get('/course', CourseController.getAllCourse);
+router.get('/course/add', CourseController.getAddCourse);
 
 //router Profile
 router.get('/profile', ProfileController.profile)
