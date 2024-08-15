@@ -1,7 +1,9 @@
+const HomePageController = require('../controllers/HomePageController');
 const UserController = require('../controllers/UserController');
 
 const router = require('express').Router();
 
+router.get('/', HomePageController.homePage)
 // route register
 router.get('/register', UserController.registerForm);
 router.post('/register', UserController.postRegister);
