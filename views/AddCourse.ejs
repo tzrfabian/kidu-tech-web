@@ -1,7 +1,42 @@
 <%- include('partials/Header') %>
 
 <div class="container">
-    
+    <h1>Add Course</h1>
+    <hr>
+
+    <form action="/course/add" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="name" class="form-label fw-semibold">Nama Course:</label>
+            <input type="text" class="form-control" placeholder="ex: Belajar membaca" name="name">
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label fw-semibold">Deskripsi:</label>
+            <input type="text" class="form-control" placeholder="ex: Biasakan untuk mencontohkan hal baik" name="description">
+        </div>
+
+        <div class="mb-3">
+            <label for="courseImg" class="form-label fw-semibold">Sampul Course:</label>
+            <input class="form-control" type="file" id="formFile" name="courseImg">
+        </div>
+
+        <div class="mb-3">
+            <label for="duration" class="form-label fw-semibold">Durasi Pembelajaran:</label>
+            <input type="number" class="form-control" placeholder="Masukkan angka" name="duration">
+        </div>
+
+        <div class="mb-3">
+            <label for="category" class="form-label">Kategori Course:</label>
+            <select class="form-select" name="CategoryId" >
+                <option value="" selected disabled>-Select Category-</option>
+                <% category.forEach(el => { %>
+                    <option value="<%= el.id %>"><%= el.name %></option>
+                <% }) %>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary">Submit Data!</button>
+    </form>
 </div>
 
 <%- include('partials/Footer') %>
