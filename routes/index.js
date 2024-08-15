@@ -3,12 +3,18 @@ const UserController = require('../controllers/UserController');
 
 const router = require('express').Router();
 
-//router Home Page
 router.get('/', HomePageController.homePage)
+// route register
+router.get('/register', UserController.registerForm);
+router.post('/register', UserController.postRegister);
 
-router.get('/register');
+// route login
+router.get('/login', UserController.loginForm);
+router.post('/login', UserController.postLogin)
 
+router.use(function (req, res, next) {
+    console.log('Time', Date.now());
+    next();
+});
 
-module.exports = router
-
-
+module.exports = router;
