@@ -38,6 +38,7 @@ class UserController {
             let user = await User.findOne({
                 where: {email}
             });
+            req.session.userId = user.id;
             if(user) {
                 const isValidPass = bcrypt.compareSync(password, user.password)
                 if(isValidPass) {
