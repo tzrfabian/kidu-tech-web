@@ -1,10 +1,13 @@
 const CategoryController = require('../controllers/CategoryController');
 const CourseController = require('../controllers/CourseController');
 const HomePageController = require('../controllers/HomePageController');
+const ProfileController = require('../controllers/ProfileController');
 const UserController = require('../controllers/UserController');
 
 const router = require('express').Router();
 
+//Home page router
+router.get('/', HomePageController.homePage);
 
 // route register
 router.get('/register', UserController.registerForm);
@@ -26,9 +29,10 @@ router.post('/login', UserController.postLogin)
 //     // next();
 // });
 
-router.get('/', HomePageController.homePage);
+//router Category
+router.get('/category', CategoryController.getAllCategory)
 
-router.get('/category', CategoryController.getAllCategory);
-router.get('/course', CourseController.getAllCourse);
+//router Profile
+router.get('/profile', ProfileController.profile)
 
 module.exports = router;
