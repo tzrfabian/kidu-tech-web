@@ -17,7 +17,7 @@ class CourseController {
     static async getAddCourse(req, res) {
         let {errors} = req.query;
         try {
-            if(errors) errors = errors.split(',').map(err => decodeURIComponent(err));;
+            if(errors) errors = errors.split(',').map(err => decodeURIComponent(err));
             console.log(errors);
             let category = await Category.findAll();
             // res.send(category);
