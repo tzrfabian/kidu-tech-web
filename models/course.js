@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const formatDate = require('../helper/formatDate');
 module.exports = (sequelize, DataTypes) => {
   class Course extends Model {
     /**
@@ -14,6 +15,15 @@ module.exports = (sequelize, DataTypes) => {
       Course.belongsToMany(models.User, {through: 'UserCourses'});
       Course.hasMany(models.Content);
     }
+
+    get callName(){
+      return 'Course ' + this.name;
+    }
+
+    get formatCreatedAt() {
+      return formatDate(this.createdAt);
+    }
+
   }
   Course.init({
     name: {
@@ -25,6 +35,10 @@ module.exports = (sequelize, DataTypes) => {
         },
         notNull: {
           msg: 'Nama Course tidak boleh kosong'
+        },
+        len: {
+          args: [5],
+          msg: 'Nama Course minimal sebanyak 5 karakter'
         }
       }
     },
@@ -61,6 +75,10 @@ module.exports = (sequelize, DataTypes) => {
         },
         notNull: {
           msg: 'Jumlah durasi tidak boleh kosong'
+        },
+        min: {
+          args: 10,
+          msg: 'Minimal durasi pembelajaran 10 menit'
         }
       }
     },

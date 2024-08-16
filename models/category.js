@@ -32,6 +32,10 @@ module.exports = (sequelize, DataTypes) => {
             });
       return data;
     }
+
+    get callName(){
+      return 'Kategori' + this.name;
+    }
     
   }
   Category.init({
