@@ -29,10 +29,8 @@ class CourseController {
     }
 
     static async postAddCourse(req, res) {
-        // console.log('Entered postAddCourse function');
         upload(req, res, async (err) => {
             try {
-                // console.log('Upload callback started');
                 if (err) {
                     return res.redirect(`/course/add?errors=${encodeURIComponent(err.message || err)}`)
                 }
